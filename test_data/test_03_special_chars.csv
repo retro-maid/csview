@@ -1,0 +1,16 @@
+id,name,address,description,tags,note
+1,Alice Johnson,"123 Main St, Springfield","A ""reliable"" customer since 2020","vip,loyal",Normal entry
+2,Bob O'Brien,"456 Oak Ave, Portland","Prefers contact via e-mail","new",Has apostrophe in name
+3,Carol & Dave,Tokyo,"Address: 東京都渋谷区1-2-3","japanese,special",Japanese address
+4,Eve Smith,"789 Pine Rd, ""Suite"" 100","Quoted suite number in address","quoted",Double quote in field
+5,Frank Lee,"Seoul, South Korea","Multi-word city with comma","international",Comma in city
+6,Grace Kim,,"No address on file","incomplete",Empty address field
+7,Henry Wong,"Osaka, Japan","備考: 特記事項なし","japanese",Mixed language note
+8,Iris Müller,"Berlin, Deutschland","Üöä ß – special German chars","german,unicode",Umlaut chars
+9,John 山田,"Kyoto / 京都","名前に英数字混在 (mixed name)","mixed",Name mix
+10,Kate & Jim,London,"Partners: 50% each & joint account","symbols",Ampersand and percent
+11,Leo Trần,"Hồ Chí Minh City","Vietnamese diacritics in name","vietnamese",Accent chars
+12,Mia Søren,"Copenhagen, Danmark","Scandinavian ø in name","nordic",Nordic chars
+13,NoName,,,"empty,all",Three empty consecutive fields
+14,Omar Said,"Cairo","100% satisfaction guaranteed!","exclaim",Exclamation mark
+15,Pam Note,"New York","Note: use ""double quotes"" carefully","quoted,note",Nested quotes

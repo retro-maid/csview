@@ -1,0 +1,21 @@
+id,product_name,category,price,stock,sales_count,rating,release_date
+1,Laptop Pro X1,Electronics,128000,50,312,4.5,2024-01-15
+2,Wireless Mouse M200,Electronics,3980,200,1540,4.2,2024-02-01
+3,USB-C Hub 7-in-1,Electronics,6800,120,890,4.7,2024-01-20
+4,Mechanical Keyboard K80,Electronics,15800,75,230,4.6,2024-03-10
+5,27inch Monitor HD,Electronics,42000,30,145,4.3,2024-02-15
+6,Office Chair ErgoX,Furniture,38000,25,88,4.8,2023-11-01
+7,Standing Desk Pro,Furniture,65000,15,56,4.6,2023-12-01
+8,Desk Lamp LED,Furniture,4500,180,720,4.1,2024-01-05
+9,Notebook A5 Pack,Stationery,980,500,2340,4.0,2024-01-01
+10,Ballpoint Pen Set,Stationery,1200,400,1890,4.3,2024-01-01
+11,Sticky Notes 400,Stationery,580,600,3100,4.2,2024-01-01
+12,File Folder Box,Stationery,1580,200,670,4.1,2024-02-20
+13,Coffee Maker Drip,Kitchen,18000,40,210,4.4,2024-01-25
+14,Electric Kettle 1L,Kitchen,7800,85,430,4.5,2024-02-10
+15,Lunch Box Stack,Kitchen,3200,150,560,4.3,2024-03-01
+16,Water Bottle 500ml,Kitchen,2400,300,980,4.6,2024-01-10
+17,Yoga Mat Premium,Sports,6800,90,340,4.7,2024-02-05
+18,Resistance Bands Set,Sports,3500,200,780,4.5,2024-01-15
+19,Running Shoes V2,Sports,12000,60,190,4.4,2024-03-15
+20,Protein Shaker 700ml,Sports,1980,250,1200,4.2,2024-01-20

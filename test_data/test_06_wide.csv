@@ -1,0 +1,13 @@
+record_id,col_01,col_02,col_03,col_04,col_05,col_06,col_07,col_08,col_09,col_10,col_11,col_12,col_13,col_14,col_15,col_16,col_17,col_18,col_19,col_20,col_21,col_22,col_23,col_24,col_25,created_at,updated_at
+R001,Alpha,10,100.1,True,A,Jan,North,High,X1,Group1,Sub1,Tag-A,Flag1,Val-01,Metric1,Score1,Level1,Type-A,Phase1,Stage1,Priority1,Batch1,Series1,Set1,Subset1,2024-01-01,2024-06-01
+R002,Beta,20,200.2,False,B,Feb,South,Medium,X2,Group2,Sub2,Tag-B,Flag2,Val-02,Metric2,Score2,Level2,Type-B,Phase2,Stage2,Priority2,Batch2,Series2,Set2,Subset2,2024-01-02,2024-06-02
+R003,Gamma,30,300.3,True,C,Mar,East,Low,X3,Group1,Sub3,Tag-C,Flag1,Val-03,Metric3,Score3,Level3,Type-C,Phase3,Stage3,Priority3,Batch3,Series3,Set3,Subset3,2024-01-03,2024-06-03
+R004,Delta,40,400.4,False,D,Apr,West,High,X4,Group2,Sub4,Tag-D,Flag2,Val-04,Metric4,Score4,Level4,Type-A,Phase4,Stage4,Priority4,Batch4,Series4,Set4,Subset4,2024-01-04,2024-06-04
+R005,Epsilon,50,500.5,True,E,May,North,Medium,X5,Group1,Sub5,Tag-E,Flag1,Val-05,Metric5,Score5,Level5,Type-B,Phase5,Stage5,Priority5,Batch5,Series5,Set5,Subset5,2024-01-05,2024-06-05
+R006,Zeta,60,600.6,False,F,Jun,South,Low,X6,Group2,Sub6,Tag-F,Flag2,Val-06,Metric6,Score6,Level6,Type-C,Phase6,Stage6,Priority6,Batch6,Series6,Set6,Subset6,2024-01-06,2024-06-06
+R007,Eta,70,700.7,True,G,Jul,East,High,X7,Group1,Sub7,Tag-G,Flag1,Val-07,Metric7,Score7,Level7,Type-A,Phase7,Stage7,Priority7,Batch7,Series7,Set7,Subset7,2024-01-07,2024-06-07
+R008,Theta,80,800.8,False,H,Aug,West,Medium,X8,Group2,Sub8,Tag-H,Flag2,Val-08,Metric8,Score8,Level8,Type-B,Phase8,Stage8,Priority8,Batch8,Series8,Set8,Subset8,2024-01-08,2024-06-08
+R009,Iota,90,900.9,True,I,Sep,North,Low,X9,Group1,Sub9,Tag-I,Flag1,Val-09,Metric9,Score9,Level9,Type-C,Phase9,Stage9,Priority9,Batch9,Series9,Set9,Subset9,2024-01-09,2024-06-09
+R010,Kappa,100,1000.0,False,J,Oct,South,High,X10,Group2,Sub10,Tag-J,Flag2,Val-10,Metric10,Score10,Level10,Type-A,Phase10,Stage10,Priority10,Batch10,Series10,Set10,Subset10,2024-01-10,2024-06-10
+R011,Lambda,110,1100.1,True,K,Nov,East,Medium,X11,Group1,Sub11,Tag-K,Flag1,Val-11,Metric11,Score11,Level11,Type-B,Phase11,Stage11,Priority11,Batch11,Series11,Set11,Subset11,2024-01-11,2024-06-11
+R012,Mu,120,1200.2,False,L,Dec,West,Low,X12,Group2,Sub12,Tag-L,Flag2,Val-12,Metric12,Score12,Level12,Type-C,Phase12,Stage12,Priority12,Batch12,Series12,Set12,Subset12,2024-01-12,2024-06-12

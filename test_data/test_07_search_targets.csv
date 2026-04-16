@@ -1,0 +1,16 @@
+id,title,author,genre,publisher,year,price,rating,in_stock,description
+B001,Python Programming Guide,Alice Smith,Technology,TechBooks,2023,3200,4.8,true,A comprehensive guide to Python 3.x programming
+B002,Data Science Fundamentals,Bob Johnson,Technology,DataPress,2022,4500,4.5,true,Introduction to data analysis and machine learning
+B003,The Art of Clean Code,Carol White,Technology,CodeBooks,2021,2800,4.9,false,Best practices for writing maintainable code
+B004,Japanese History Vol.1,David Tanaka,History,HistoryPub,2020,5800,4.3,true,Ancient Japan from prehistoric times to Edo period
+B005,Modern Economics,Eve Brown,Economics,EconPress,2023,3600,4.1,true,Macroeconomics and microeconomics explained simply
+B006,Creative Writing Workshop,Frank Lee,Literature,LitBooks,2022,2400,4.6,true,Techniques for fiction and non-fiction writing
+B007,Python for Data Science,Grace Kim,Technology,TechBooks,2023,4200,4.7,false,Python applied to data science workflows
+B008,World Geography Atlas,Henry Park,Geography,GeoPress,2021,8900,4.4,true,Comprehensive atlas with detailed maps
+B009,Introduction to Philosophy,Iris Chen,Philosophy,PhiloBooks,2020,2900,4.2,true,Western and Eastern philosophy overview
+B010,Machine Learning Basics,Jack Wilson,Technology,DataPress,2023,5500,4.8,true,Neural networks and deep learning fundamentals
+B011,Japanese Cooking 101,Karen Yamamoto,Cooking,FoodBooks,2022,2200,4.9,true,Traditional Japanese recipes for home cooking
+B012,The Python Cookbook,Leo Garcia,Technology,TechBooks,2021,3800,4.6,true,Advanced Python recipes and patterns
+B013,Financial Planning Guide,Mia Anderson,Finance,FinancePress,2023,3100,4.3,false,Personal finance and investment strategies
+B014,古典文学入門,Nora Sato,Literature,和書出版,2022,2600,4.5,true,平安・鎌倉時代の古典文学を現代語で解説
+B015,History of Technology,Oscar Brown,History,HistoryPub,2023,4100,4.4,true,From steam engines to artificial intelligence

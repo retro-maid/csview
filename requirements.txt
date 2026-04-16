@@ -1,0 +1,6 @@
+# Runtime dependencies
+charset-normalizer>=3.0
+pyqt6==6.9.1
+pyqt6-qt6==6.9.1
+pyqt6-sip==13.10.2
+pyzipper==0.3.6

@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# PyInstaller build artifacts
+dist/
+build/
+*.spec.bak
+
+# Inno Setup output
+installer/Output/
+
+# SQLite temporary databases
+*.db
+
+# User config / logs (generated at runtime)
+*.log
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# pytest / coverage
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Large test CSV files (locally generated, not committed)
+test_data/large/
+test_data/generate_large_csv.py
+
+# Local / personal files (not for repository)
+memo
+build_installer.txt
+
+# Claude Code (local development tool — not part of the distributed project)
+.claude/
+
+# Source design assets (build artifact app_icon.ico is committed instead)
+# long_logo.png is kept as it is used in README
+assets/icon.py
+assets/logo.png
+assets/logo1.png
+
+# Benchmark generated data (large CSV/DB files)
+benchmark_data/
+benchmark_results.md

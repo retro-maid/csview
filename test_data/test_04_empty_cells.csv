@@ -1,0 +1,16 @@
+employee_id,name,department,position,salary,manager,phone,email,hire_date,notes
+E001,Alice Chen,Engineering,Senior Engineer,750000,Bob Smith,090-1234-5678,alice@example.com,2020-04-01,
+E002,Bob Smith,Engineering,Manager,900000,,080-2345-6789,bob@example.com,2018-06-15,Department head
+E003,Carol Davis,,Junior Engineer,450000,Bob Smith,,carol@example.com,2023-01-10,No department assigned
+E004,David Park,Marketing,,,Frank Lee,070-3456-7890,,2021-09-01,Salary TBD
+E005,Eve Wilson,Marketing,Director,1200000,,060-4567-8901,eve@example.com,2015-03-20,
+E006,Frank Lee,Marketing,Manager,850000,Eve Wilson,,,2019-07-01,No phone/email on file
+E007,Grace Kim,,,,,,,,Incomplete record
+E008,Henry Tan,Engineering,Engineer,600000,Bob Smith,090-5678-9012,henry@example.com,,No hire date
+E009,Iris Brown,HR,HR Specialist,550000,,080-6789-0123,iris@example.com,2022-05-15,
+E010,Jack Morris,HR,Manager,800000,,,jack@example.com,2017-11-30,
+E011,Kate Zhang,Finance,Analyst,520000,Lisa Wong,090-7890-1234,,2023-04-01,No email
+E012,Lisa Wong,Finance,Director,1100000,,,,2014-08-10,Founding member
+E013,,Engineering,Intern,200000,Bob Smith,,,2024-01-15,Name not registered
+E014,Mike Sun,,,480000,,,,2023-10-01,
+E015,Nina Patel,Marketing,Designer,560000,Frank Lee,,nina@example.com,2022-08-20,

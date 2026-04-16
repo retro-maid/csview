@@ -1,0 +1,132 @@
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Verify tag matches version.json
+        shell: python
+        run: |
+          import json, os, sys
+          tag = os.environ["GITHUB_REF_NAME"]          # "v1.0.1"
+          with open("version.json", encoding="utf-8") as f:
+              ver = json.load(f)["version"]             # "1.0.1"
+          if tag != f"v{ver}":
+              sys.exit(f"ERROR: tag '{tag}' does not match version.json 'v{ver}'")
+          print(f"OK: {tag} matches version.json")
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Build EXE with PyInstaller
+        run: pyinstaller csv_viewer.spec --clean --noconfirm
+
+      - name: Verify EXE
+        shell: pwsh
+        run: |
+          $exe = "dist\CSView\CSView.exe"
+          if (!(Test-Path $exe)) { throw "dist\CSView\CSView.exe not found" }
+          $sizeMB = [math]::Round((Get-Item $exe).Length / 1MB, 1)
+          Write-Host "CSView.exe: $sizeMB MB"
+          if ($sizeMB -lt 1) { throw "EXE size is suspiciously small (possible build failure)" }
+
+      - name: Create portable ZIP
+        shell: pwsh
+        run: |
+          Compress-Archive -Path "dist\CSView\*" -DestinationPath "dist\CSView_portable.zip" -Force
+          $sizeMB = [math]::Round((Get-Item "dist\CSView_portable.zip").Length / 1MB, 1)
+          Write-Host "CSView_portable.zip: $sizeMB MB"
+
+      - name: Install Inno Setup
+        run: choco install innosetup --yes --no-progress
+
+      - name: Sync installer version from version.json
+        shell: python
+        run: |
+          import json, re
+          with open("version.json", encoding="utf-8") as f:
+              version = json.load(f)["version"]
+          content = open("installer/csv_viewer_installer.iss", encoding="utf-8").read()
+          content = re.sub(r'(#define AppVersion\s+)"[^"]*"', rf'\1"{version}"', content)
+          open("installer/csv_viewer_installer.iss", "w", encoding="utf-8").write(content)
+          print(f"ISS AppVersion synced: {version}")
+
+      - name: Build Installer
+        shell: pwsh
+        run: |
+          $iscc = "C:\Program Files (x86)\Inno Setup 6\ISCC.exe"
+          & $iscc installer\csv_viewer_installer.iss
+          if ($LASTEXITCODE -ne 0) { throw "Inno Setup build failed" }
+
+      - name: Get version and release notes
+        id: ver
+        shell: python
+        run: |
+          import json, os, re
+
+          with open("version.json", encoding="utf-8") as f:
+              version = json.load(f)["version"]
+
+          # CHANGELOG.md から該当バージョンのセクションを抽出
+          changelog = open("CHANGELOG.md", encoding="utf-8").read()
+          pattern = rf"## \[{re.escape(version)}\][^\n]*\n(.*?)(?=\n## \[|\Z)"
+          m = re.search(pattern, changelog, re.DOTALL)
+          notes = m.group(1).strip() if m else "_No release notes found in CHANGELOG.md._"
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write(f"version={version}\n")
+              # 複数行出力は heredoc 形式
+              delimiter = "CHANGELOG_EOF"
+              out.write(f"notes<<{delimiter}\n{notes}\n{delimiter}\n")
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "CSView v${{ steps.ver.outputs.version }}"
+          body: |
+            ## What's Changed
+
+            ${{ steps.ver.outputs.notes }}
+
+            ---
+
+            ### Download / ダウンロード
+
+            | File | Description |
+            |------|-------------|
+            | `CSView_Setup_${{ steps.ver.outputs.version }}.exe` | **Installer** (recommended) — includes `.csv` / `.tsv` file associations |
+            | `CSView_portable.zip` | **Portable** — extract and run `CSView.exe` directly |
+
+            | ファイル | 説明 |
+            |----------|------|
+            | `CSView_Setup_${{ steps.ver.outputs.version }}.exe` | **インストーラー版**（推奨）— `.csv` / `.tsv` のファイル関連付けを設定 |
+            | `CSView_portable.zip` | **ポータブル版** — ZIP を展開して `CSView.exe` を実行 |
+
+            ### System Requirements / 動作要件
+            - Windows 10 / 11 (64-bit)
+          files: |
+            installer/Output/CSView_Setup_*.exe
+            dist/CSView_portable.zip
+          fail_on_unmatched_files: true
