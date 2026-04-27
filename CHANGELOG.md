@@ -9,12 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.2] - 2026-04-27
 
 ### Fixed
-- About タブ（設定 → ソフト情報）にバージョン番号・著作権表記・ライセンスリンクを追加
-- インストーラーにライセンス同意画面を追加（GNU GPL v3 を表示）
-- LICENSE ファイル先頭にプロジェクト固有の著作権表記を追加（`Copyright (C) 2026 Retro Maid`）
+- About tab (Settings → About) now shows version number, copyright notice, and a link to the license / About タブ（設定 → ソフト情報）にバージョン番号・著作権表記・ライセンスリンクを追加
+- Installer now displays the GNU GPL v3 license agreement screen before installation / インストーラーにライセンス同意画面を追加（GNU GPL v3 を表示）
+- Added project-specific copyright notice to the top of the LICENSE file / LICENSE ファイル先頭にプロジェクト固有の著作権表記を追加（`Copyright (C) 2026 Retro Maid`）
 
 ### Added
-- README にダウンロード数バッジを追加（累計・最新バージョン別）
+- Download count badges (total & latest release) added to README / README にダウンロード数バッジを追加（累計・最新バージョン別）
 
 ## [1.0.1] - 2026-04-01
 
