@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-04-27
+
+### Fixed
+- About タブ（設定 → ソフト情報）にバージョン番号・著作権表記・ライセンスリンクを追加
+- インストーラーにライセンス同意画面を追加（GNU GPL v3 を表示）
+- LICENSE ファイル先頭にプロジェクト固有の著作権表記を追加（`Copyright (C) 2026 Retro Maid`）
+
+### Added
+- README にダウンロード数バッジを追加（累計・最新バージョン別）
+
 ## [1.0.1] - 2026-04-01
 
 ### Added
@@ -29,5 +39,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - EXE への Version Resource 埋め込み（FileDescription / ProductName 等）
 - CHANGELOG.md 連動の GitHub リリースノート自動生成 CI/CD パイプライン
 
-[Unreleased]: https://github.com/Retro-Maid/CSView/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/Retro-Maid/CSView/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/Retro-Maid/CSView/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/Retro-Maid/CSView/releases/tag/v1.0.1

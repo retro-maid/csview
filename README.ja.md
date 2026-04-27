@@ -34,6 +34,15 @@
   <img src="https://img.shields.io/badge/ライセンス-GPL%20v3-blue?style=flat-square&logo=gnu&logoColor=white" alt="License">
 </p>
 
+<p align="center">
+  <a href="https://github.com/Retro-Maid/CSView/releases">
+    <img src="https://img.shields.io/github/downloads/Retro-Maid/CSView/total?style=flat-square&label=%E7%B4%AF%E8%A8%88DL%E6%95%B0&color=28a745&logo=github&logoColor=white" alt="累計ダウンロード数">
+  </a>
+  <a href="https://github.com/Retro-Maid/CSView/releases/latest">
+    <img src="https://img.shields.io/github/downloads/Retro-Maid/CSView/latest/total?style=flat-square&label=%E6%9C%80%E6%96%B0%E7%89%88DL%E6%95%B0&color=28a745&logo=github&logoColor=white" alt="最新版ダウンロード数">
+  </a>
+</p>
+
 ---
 
 **CSView** は PyQt6 + SQLite を使った Windows 向けの高速軽量 CSV/TSV ビューアです。

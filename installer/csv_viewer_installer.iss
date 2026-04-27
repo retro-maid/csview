@@ -2,7 +2,7 @@
 ; バージョンを変更するときは AppVersion と OutputBaseFilename のみ更新する
 
 #define AppName      "CSView"
-#define AppVersion   "1.0.1"
+#define AppVersion   "1.0.2"
 #define AppPublisher "Retro Maid"
 #define AppExeName   "CSView.exe"
 #define AppURL       "https://github.com/Retro-Maid/CSView"
@@ -38,7 +38,11 @@ PrivilegesRequiredOverridesAllowed=dialog
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 
+; --- ライセンス同意画面（GPL v3） ---
+LicenseFile=..\LICENSE
+
 ; --- バージョン情報 ---
+; NOTE: AppVersion と VersionInfoCopyright の年は version.json と合わせて手動更新すること
 VersionInfoVersion={#AppVersion}
 VersionInfoCompany={#AppPublisher}
 VersionInfoDescription={#AppName} Setup

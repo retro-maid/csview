@@ -358,10 +358,33 @@ class SettingsDialog(QDialog):
         name_label.setStyleSheet("font-size: 28px; font-weight: bold;")
         layout.addWidget(name_label)
 
+        version_label = QLabel(f'v{app_info.get("version", "")}')
+        version_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
+        version_label.setStyleSheet("font-size: 15px; color: gray;")
+        layout.addWidget(version_label)
+
         author_label = QLabel(_("製作者:") + f' {app_info.get("author", "")}')
         author_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
         author_label.setStyleSheet("font-size: 14px;")
         layout.addWidget(author_label)
+
+        copyright_label = QLabel(app_info.get("copyright", ""))
+        copyright_label.setAlignment(Qt.AlignmentFlag.AlignHCenter)
+        copyright_label.setStyleSheet("font-size: 12px; color: gray;")
+        layout.addWidget(copyright_label)
+
+        license_btn = QPushButton("GNU General Public License v3.0")
+        license_btn.setFlat(True)
+        license_btn.setCursor(Qt.CursorShape.PointingHandCursor)
+        license_btn.setStyleSheet(
+            "QPushButton { font-size: 12px; color: #4a90d9; text-decoration: underline;"
+            " border: none; background: transparent; padding: 0; }"
+            " QPushButton:hover { color: #2a6db5; }"
+        )
+        license_btn.clicked.connect(
+            lambda: QDesktopServices.openUrl(QUrl("https://github.com/Retro-Maid/CSView/blob/main/LICENSE"))
+        )
+        layout.addWidget(license_btn, alignment=Qt.AlignmentFlag.AlignHCenter)
 
         # X / GitHub ボタン
         _X_SVG = (

@@ -34,6 +34,15 @@
   <img src="https://img.shields.io/badge/License-GPL%20v3-blue?style=flat-square&logo=gnu&logoColor=white" alt="License">
 </p>
 
+<p align="center">
+  <a href="https://github.com/Retro-Maid/CSView/releases">
+    <img src="https://img.shields.io/github/downloads/Retro-Maid/CSView/total?style=flat-square&label=Total%20Downloads&color=28a745&logo=github&logoColor=white" alt="Total Downloads">
+  </a>
+  <a href="https://github.com/Retro-Maid/CSView/releases/latest">
+    <img src="https://img.shields.io/github/downloads/Retro-Maid/CSView/latest/total?style=flat-square&label=Latest%20Downloads&color=28a745&logo=github&logoColor=white" alt="Latest Downloads">
+  </a>
+</p>
+
 ---
 
 **CSView** is a fast, lightweight CSV/TSV viewer for Windows built with PyQt6 and SQLite.
